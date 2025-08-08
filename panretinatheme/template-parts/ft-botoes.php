@@ -1,44 +1,63 @@
 <?php
 
 $buttons = array(
-    ['nome' => is_language_en('Registration', 'Inscrições'), 'icon' => 'icon-exam', 'modal' => false, 'idModal' => '', 'link' => is_link_en(60, 58), 'link_externo' => false],
-    ['nome' => is_language_en('International Speakers', 'Convidados Internacionais'), 'icon' => 'icon-graduate-hat', 'modal' => false, 'idModal' => '', 'link' => is_link_en(147, 149), 'link_externo' => false],
+    ['nome' => is_language_en('Registration', 'Inscreva-se'), 'icon' => 'icon-exam', 'modal' => false, 'idModal' => '', 'link' => is_link_en(60, 58), 'link_externo' => false],
+    ['nome' => is_language_en('Speakers', 'Palestrantes'), 'icon' => 'icon-graduate-hat', 'modal' => false, 'idModal' => '', 'link' => is_link_en(147, 149), 'link_externo' => false],
+    ['nome' => is_language_en('Programming', 'Programação'), 'icon' => 'icon-hotel', 'modal' => false, 'idModal' => '', 'link' => is_link_en(52, 50), 'link_externo' => false],
     ['nome' => is_language_en('Venue', 'Local do Evento'), 'icon' => 'icon-location', 'modal' => false, 'idModal' => '', 'link' => is_link_en(56, 54), 'link_externo' => false],
-    ['nome' => is_language_en('Hotel Reservation', 'Hospedagem'), 'icon' => 'icon-hotel', 'modal' => false, 'idModal' => '', 'link' => is_link_en(52, 50), 'link_externo' => false],
-    
-    // ['nome' => 'RETINA 2025 APP', 'nome_en' => 'RETINA 2025 APP ', 'icon' => 'icon-ui-design', 'modal' => false, 'idModal' => '', 'link' => get_the_permalink(418), 'link_en' => get_the_permalink(421), 'link_externo' => false],
-    // ['nome' => 'Programação', 'nome_en' => 'Program ', 'icon' => 'icon-pesquisa', 'modal' => true, 'idModal' => 'modalProg', 'link' => '', 'link_en' => '', 'link_externo' => false],
-    // ['nome' => 'Palestrantes', 'nome_en' => 'Speakers', 'icon' => 'icon-speaker', 'modal' => false, 'idModal' => '', 'link' => get_the_permalink(301), 'link_en' => get_the_permalink(299), 'link_externo' => false],
-    // ['nome' => 'Certificados', 'nome_en' => 'Certificates', 'icon' => 'icon-diploma', 'modal' => false, 'idModal' => '', 'link' => 'https://atep.iweventos.com.br/evento/retina2025/certificados', 'link_en' => 'https://atep.iweventos.com.br/evento/retina2025/certificados', 'link_externo' => true],
 );
+
+// Função helper para gerar atributos do link
+function generateLinkAttributes($btn) {
+    $attributes = ['class' => 'no-underline text-secondary'];
+    
+    if (!empty($btn['idModal'])) {
+        // É um modal
+        $attributes['class'] .= ' cursor-pointer';
+        $attributes['data-bs-toggle'] = 'modal';
+        $attributes['data-bs-target'] = '#' . $btn['idModal'];
+        $attributes['href'] = '#';
+    } else {
+        // É um link normal
+        $attributes['href'] = $btn['link'];
+        $attributes['target'] = $btn['link_externo'] ? '_blank' : '_self';
+    }
+    
+    return $attributes;
+}
+
+// Função para renderizar atributos como string
+function renderAttributes($attributes) {
+    $result = '';
+    foreach ($attributes as $key => $value) {
+        $result .= $key . '="' . htmlspecialchars($value) . '" ';
+    }
+    return trim($result);
+}
 
 ?>
 
-<section class="py-20">
+<section class="max-xl:pt-20 pb-20 lg:-mt-15 2xl:-mt-25">
     <div class="container">
         <div class="grid grid-cols-12 gap-4 gap-y-10">
 
             <?php foreach($buttons as $btn) :
-            $target = $btn['link_externo'] == true;
-            $link = $btn['link'];
-            $modal = $btn['idModal'];
-            $title = $btn['nome'];
-            $icon = $btn['icon'];
+            $linkAttributes = generateLinkAttributes($btn);
+            ?>
+
+            <div class="col-span-12 md:col-span-6 lg:col-span-3 c-card-btn">
             
-            if ($modal == false) : ?>
+                <i class="<?= $btn['icon']; ?> h2"></i>
+                <p class="font-bold c-card-btn__title"> <?= $btn['nome']; ?> </p>
 
-            <a href="<?= $link; ?>" class="col-span-12 md:col-span-6 lg:col-span-3 c-card-btn no-underline" target="<?= ($target) ? '_blank': '_self'; ?>">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <?php else : ?>
+                <a <?= renderAttributes($linkAttributes); ?> >
+                    <?= is_language_en('Load more', 'Saiba mais'); ?>
+                </a>
+            
+            </div>
 
-            <a class="col-span-12 md:col-span-6 lg:col-span-3 c-card-btn no-underline cursor-pointer" data-bs-toggle="modal" data-bs-target="#<?= $modal; ?>">
-
-            <?php endif; ?>
-
-                <i class="<?= $icon; ?> h1"></i>
-                <p class="font-bold c-card-btn__title"> <?= $title; ?> </p>
-
-            </a>
             <?php endforeach; ?>
 
         </div>

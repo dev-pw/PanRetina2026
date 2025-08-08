@@ -74,8 +74,8 @@ function options_theme() {
         'Logo' => array('options_logo_footer', 'cp_logo_footer', 'footer', 'footer'),
         'Ativar Popup' => array('options_ativar_pop', 'cp_ativar_pop', 'popup', 'popup'),
         'Imagem Popup' => array('options_img_pop', 'cp_img_pop', 'popup', 'popup'),
-        'Descrição' => array('options_desc', 'cp_desc', 'footer', 'footer'),
-        'CopyRight Text' => array('options_copy', 'cp_copy', 'footer', 'footer'),
+        // 'Descrição' => array('options_desc', 'cp_desc', 'footer', 'footer'),
+        // 'CopyRight Text' => array('options_copy', 'cp_copy', 'footer', 'footer'),
         
         'Facebook' => array('options_rs_1', 'cp_rs_1', 'rs', 'rs'),
         'Instagram' => array('options_rs_2', 'cp_rs_2', 'rs', 'rs'),
