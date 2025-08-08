@@ -1,0 +1,70 @@
+@layer components {
+
+    .btn-rs, .btn-rs-dark{
+        a{
+            @apply size-10 border border-2 rounded-full border-white flex items-center transition-all duration-200 justify-center hover:bg-white;
+            
+            &:hover{
+                i{
+                    @apply text-primary;
+                }
+            }
+            
+            i{
+                @apply text-white;
+            }
+        }
+    }
+
+    .btn-rs-dark{
+        a{
+            @apply border-primary hover:bg-primary;
+            
+            &:hover{
+                i{
+                    @apply text-white;
+                }
+            }
+            
+            i{
+                @apply text-primary;
+            }
+        }
+    }
+
+    .btn{
+        @apply outline-none inline-block py-2 px-8 font-medium transition-all duration-300;
+    }
+
+    .btn-white{
+        @apply outline-none bg-white inline-block py-2 px-8 text-secondary font-medium transition-all duration-200 hover:bg-primary hover:text-white;
+    }
+
+    .btn-primary{
+        @apply outline-none bg-primary inline-block py-2 px-8 text-white text-center font-medium transition-all duration-200 hover:bg-primary-dark;
+    }
+
+    .btn-secondary{
+        @apply outline-none bg-secondary inline-block py-2 px-8 text-primary text-center font-medium transition-all duration-200 hover:bg-secondary-dark;
+    }
+
+    .btn-outline {
+        
+        &-primary{
+            @apply outline-none border-1 border-primary inline-block py-2 px-8 text-primary text-center font-medium transition-all duration-200 hover:bg-primary hover:text-white;
+        }
+
+        &-secondary{
+            @apply outline-none border-1 border-secondary inline-block py-2 px-8 text-secondary text-center font-medium transition-all duration-200 hover:bg-secondary hover:text-white;
+        }
+        
+        &-white {
+            @apply outline-none border-1 border-white inline-block py-2 px-8 text-white text-center font-medium transition-all duration-200 hover:bg-white hover:text-primary;
+        }
+    }
+
+    .btn-gradient{
+        @apply outline-none bg-gradient-to-r from-[#0E6EAF] via-[#003F79] to-[#0E6EAF] bg-[length:200%] bg-left hover:bg-right text-white;
+    }
+    
+}

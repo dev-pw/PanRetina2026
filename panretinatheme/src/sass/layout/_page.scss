@@ -1,0 +1,16 @@
+@layer components {
+    
+    .l-mensagem{
+
+        &__card{
+            @apply relative max-xl:rounded-2xl 2xl:rounded-2xl max-xl:overflow-hidden 2xl:overflow-hidden;
+            @apply before:md:bg-secondary before:md:w-[30%] before:xl:w-[40%] before:md:absolute before:md:top-0 before:md:left-0 before:md:h-full
+        }
+
+        &__item{
+            @apply flex max-md:flex-wrap items-center max-md:text-center h-full relative z-10;
+        }
+
+    }
+    
+}

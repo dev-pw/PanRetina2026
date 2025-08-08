@@ -1,0 +1,139 @@
+@layer utilities {
+
+    body{
+        @apply overflow-x-hidden;
+    }
+    
+    main {
+        @apply pt-[95px] md:pt-[99px] lg:pt-[111px];
+    }
+
+}
+
+@layer components {
+
+    .transition{
+        @apply transition-all ease-in duration-200;
+    }
+
+    .text-limit{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .u-list-style {
+        @apply ps-5;
+        
+        li {
+            @apply list-[circle] not-first:mt-2 marker:text-primary;
+        }
+    }
+
+    .entry-content-post {
+
+        >* {
+            @apply mt-5 first:mt-0;
+        }
+    
+        p {
+            @media (min-width: 791px) {
+                @apply text-justify;
+            }
+        }
+    
+        a {
+            @apply text-wrap text-primary underline;
+        }
+    
+        img {
+            @apply w-full h-full;
+        }
+
+        .img-rounded{
+            img{
+                @apply rounded-xl;
+            }
+        }
+    
+        .wp-element-button {
+            @apply bg-primary text-white py-2 px-7;
+        }
+    
+        h1, h2, h3, h4, h5, h6 {
+            @apply text-primary not-first:mt-8;
+        }
+
+        h1, .h1{
+            @apply text-4xl;
+        }
+
+        h2, .h2{
+            @apply text-3xl;
+        }
+
+        h3, .h3{
+            @apply text-2xl;
+        }
+
+        h4, .h4{
+            @apply text-xl;
+        }
+
+        h5, .h5{
+            @apply text-lg;
+        }
+
+        h6, .h6{
+            @apply text-base;
+        }
+    
+        ul {
+            @apply ps-6 mb-8;
+            
+            li {
+                @apply list-[circle] not-first:mt-3 text-base/6 marker:text-primary;
+            }
+        }
+        
+        ol {
+            @apply ps-6;
+            li {
+                @apply text-base/6 not-first:mt-3 list-decimal marker:text-primary;
+            }
+        }
+
+        table{
+            @media (max-width: 767px) {
+                @apply w-200;
+            }
+        }
+
+        .wp-block-table{
+            @apply mt-6;
+        }
+
+        .wp-block-button{
+            .wp-block-button__link{
+                @apply bg-primary py-3 px-10 hover:bg-primary-dark transition-all duration-200;
+            }
+        }
+    
+        .wp-bootstrap-blocks-button {
+    
+            .btn {
+    
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+    
+            .btn-primary,
+            .btn-secondary {
+                color: #fff;
+                border-radius: 0px !important;
+            }
+        }
+    }
+}

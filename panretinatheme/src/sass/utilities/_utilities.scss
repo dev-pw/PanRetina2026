@@ -1,0 +1,55 @@
+@layer utilities {
+
+    .container {
+        @apply mx-auto px-3;
+    }
+    
+    @media (width >= 576px) {
+        .container{
+            max-width: var(--container-sm);
+        }
+    }
+    
+    @media (width >= 768px) {
+        .container{
+            max-width: var(--container-md);
+        }
+    }
+
+    @media (width >= 992px) {
+        .container{
+            max-width: var(--container-lg);
+        }
+    }
+
+    @media (width >= 1200px) {
+        .container{
+            max-width: var(--container-xl);
+        }
+    }
+
+    @media (width >= 1400px) {
+        .container{
+            max-width: var(--container-2xl);
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ @apply font-bold; }
+
+    h1, .h1{ @apply text-5xl; }
+
+    h2, .h2{ @apply text-4xl; }
+
+    h3, .h3{ @apply text-3xl; }
+
+    h4, .h4{ @apply text-2xl; }
+
+    h5, .h5{ @apply text-xl; }
+
+    h6, .h6{ @apply text-lg; }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea, select {
+        @apply min-h-15 focus:shadow-none;
+    }
+
+}

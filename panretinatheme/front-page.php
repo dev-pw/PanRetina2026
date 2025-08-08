@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Front-page
+ * @package WordPress
+ * @subpackage panretinatheme
+ *
+ */
+
+ get_header();
+
+ echo '<main role="main">';
+
+ echo wp_get_attachment_image(16, 'full', '', ['class' => 'w-full']);
+//  get_template_part('template-parts/ft-video');
+ get_template_part('template-parts/ft-botoes');
+ get_template_part('template-parts/ft-cronometro');
+ get_template_part('template-parts/ft-mensagem');
+ get_template_part('template-parts/ft-inscricao');
+//  get_template_part('template-parts/ft-cta');
+ get_template_part('template-parts/ft-local');
+ get_template_part('template-parts/ft-banners');
+
+ echo '</main>';
+
+ get_footer(); ?>

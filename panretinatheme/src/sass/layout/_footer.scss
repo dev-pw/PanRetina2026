@@ -1,0 +1,13 @@
+@layer components {
+
+    #logo-pw{
+        &:hover {
+            img{
+                animation-name: bounce;
+                animation-duration: .5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    
+}

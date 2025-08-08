@@ -1,0 +1,7 @@
+.env
+composer.lock
+server/vendor
+plugins
+uploads
+node_modules
+package-lock.json

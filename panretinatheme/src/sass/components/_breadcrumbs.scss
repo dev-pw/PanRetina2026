@@ -1,0 +1,25 @@
+@layer components {
+    
+    .breadcrumbs{
+        @apply text-sm bg-gray-50 py-3 px-4 mt-6 flex rounded-lg border-gray-500 text-gray-900;
+
+        >span{
+            >span{
+                @apply first:before:content-["\e901"] first:before:font-[icomoon] first:inline-flex first:items-center not-last:me-2;
+                
+                >a{
+                    @apply first:ps-1;
+                }
+            }
+        }
+        
+        a{
+            @apply text-primary transition-all duration-150 ease-in hover:text-secondary;
+        }
+        
+        .breadcrumb_last{
+            @apply text-gray-400;
+        }
+    }
+    
+}

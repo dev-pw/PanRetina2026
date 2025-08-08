@@ -1,0 +1,14 @@
+@layer components {
+    
+    .page-numbers{
+        @apply bg-secondary w-10 h-10 rounded-md flex items-center justify-center text-white transition-all duration-200 ease-in;
+        @variant hover{
+            @apply bg-primary;
+        }
+
+        &.current{
+            @apply bg-primary;
+        }
+    }
+    
+}

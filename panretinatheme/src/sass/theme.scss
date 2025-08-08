@@ -1,0 +1,44 @@
+@use "tailwindcss";
+
+@use "utilities" as *;
+
+@use "components/breadcrumbs";
+@use "components/card";
+@use "components/pagination";
+@use "components/table";
+@use "components/buttons";
+@use "components/nav";
+
+@use "layout/page";
+@use "layout/header";
+@use "layout/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "../../node_modules/preline/variants.css";
+
+:root{
+    --swiper-theme-color: var(--color-secondary);
+    --before-height: 100vh;
+}
+
+*{
+    font-family: var(--font-inter);
+}
+
+#preload{
+    transition: opacity .3s ease, visibility .5s;
+}
+
+@keyframes translate {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+:where(figure) {
+    margin: revert-layer;
+}

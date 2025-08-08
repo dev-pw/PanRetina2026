@@ -1,0 +1,32 @@
+@use "../utilities" as *;
+
+@layer components {
+
+    .c-card-btn{
+        @apply relative flex flex-col gap-y-4 items-center justify-center bg-secondary text-primary h-55 w-full transition duration-300 ease-in-out hover:bg-primary;
+        
+        &::before{
+            @apply absolute right-8 w-20 h-10 -bottom-4 bg-[#006EB4] transition duration-300 ease-in-out;
+            border-radius: 100px 100px 0px 0px;
+            content: "";
+        }
+
+        &__title, i{
+            @apply text-center transition duration-300 ease-in-out;
+        }
+        
+        &__title{
+            @extend .h5;
+        }
+
+        &:hover{
+            &::before{
+                @apply bg-secondary -rotate-180;
+            }
+            i, .c-card-btn__title{
+                @apply text-secondary;
+            }
+        }
+    }
+    
+}

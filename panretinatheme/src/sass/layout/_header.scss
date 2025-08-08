@@ -1,0 +1,28 @@
+@layer components {
+    
+    .bg-menu{
+        @apply relative;
+
+        @variant before{
+            content: '';
+            background: #19213c url(../../../../uploads/2025/05/bg-menu-sem-filtro.png) no-repeat center/cover;
+            background-blend-mode: overlay;
+            @apply absolute inset-0 -z-1 opacity-50 w-full h-full min-h-screen;
+            height: var(--before-height);
+        }
+    }
+
+    .l-polylang{
+
+        li{
+
+            a{
+                @apply relative before:rounded-full before:border before:border-primary before:size-10 before:absolute before:-z-1 before:right-0 before:scale-0 before:transition-all before:duration-200 before:ease-in-out hover:before:scale-100;
+            }
+
+            img{
+                @apply p-1;
+            }
+        }
+    }
+}
