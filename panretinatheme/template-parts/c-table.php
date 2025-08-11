@@ -74,10 +74,10 @@
 <table class="c-responsive-table text-white w-full">
     <thead>
         <tr>
-            <th class="w-[16.6px] bg-[#E9E9E9] text-primary uppercase font-bold text-lg"> <?= is_language_en('Category', 'Categoria'); ?> </th>
+            <th class="w-[16.6px] bg-[#E9E9E9] text-primary uppercase font-bold text-lg rounded-t-lg"> <?= is_language_en('Category', 'Categoria'); ?> </th>
             <?php foreach ($cols as $key => $col) : ?>
-            <th class="w-[16.6px] align-bottom p-0 text-center cat<?= $key+1 ?> bg-[#006EB4] text-white border-x-2 border-[#E9E9E9] <?= ($key == 1)? 'font-bold' : '';?>" data-label-hover="Register now">
-                <div class="p-3 text-lg flex items-center justify-center min-h-[120px] uppercase" data-label-hover="Register now"> 
+            <th class="w-[16.6px] align-bottom p-0 text-center cat<?= $key+1 ?> small cursor-pointer relative h-1 text-white" data-label-hover="Register now">
+                <div class="bg-primary ms-auto py-3 rounded-t-lg flex items-center justify-center h-full w-[85%] px-5 <?= ($key == 1)? 'font-bold' : '';?>" data-label-hover="Register now"> 
                     <?= $col; ?> 
                 </div>
             </th>
@@ -87,12 +87,14 @@
 
     <tbody>
         <?php foreach ($table01 as $row): ?>
-        <tr class="bg-gray-300 text-primary nth-of-type-[2n]:bg-primary nth-of-type-[2n]:text-white mb-12 xl:mb-0 relative z-10">
-            <td class="p-3 text-center font-bold text-sm lg:border-r-2 lg:border-[#E9E9E9]" data-label="CATEGORIA"> <?= $row['category']; ?> </td>
+        <tr class="bg-gray-100 text-primary nth-of-type-[2n]:bg-white nth-of-type-[2n]:text-dark max-xl:mb-12 relative z-10 lg:last:[&>td>div]:border-b-2">
+            <td class="p-3 text-center font-bold text-sm" data-label="CATEGORIA"> <?= $row['category']; ?> </td>
             <?php foreach ($cols as $i => $col): ?>
-            <td class="cat<?= $i+1; ?> p-4 text-center lg:not-last:border-r-2 lg:not-last:border-[#E9E9E9]" 
+            <td class="cat<?= $i+1; ?> lg:h-1" 
                 data-label="<?= str_replace('<br>', " - ", $col); ?>">
-                <?= $row[$col]; ?>
+                <div class="ms-auto h-full py-3 flex items-center justify-end lg:justify-center w-[85%] px-5 text-center lg:border-x-2 lg:border-primary <?= ($key == 1)? 'font-bold' : '';?>" data-label-hover="Register now"> 
+                    <?= $row[$col]; ?>
+                </div>
             </td>
             <?php endforeach; ?>
         </tr>
@@ -101,6 +103,7 @@
     </tbody>
 </table>
 
+<?php /*
 <div class="mb-8">
     <p class="mb-0"> (*) <?= is_language_en('It is mandatory to present proof of category', 'Obrigatório apresentar comprovante de categoria') ;?> </p>
     <p class="m-0"> (**) <?= is_language_en('If you would like to pay for your registration and contribute to BRAVS, please send an email to', 'Caso você queira pagar sua inscrição e contribuir com a SBRV, favor enviar um e-mail para:'); ?> <a href="mailto:janice@atepeventos.com.br" target="_blank" rel="noopener noreferrer" class="underline text-primary"> janice@atepeventos.com.br </a> </p>
@@ -109,3 +112,5 @@
 <?php if(pll_current_language() == 'en'): ?>
     <p>Rates are listed in Brazilian Real. The charge on your credit card will be in the local currency: Real/BRL/R$ (Brazilian Real). <a href=" https://www.xe.com/currencyconverter/convert/?Amount=1&From=BRL&To=USD" target="_blank" rel="noopener noreferrer" class="underline text-primary"> Click here </a> to to see the equivalent registration fee in your currency.</p>
 <?php endif; ?>
+
+*/ ?>

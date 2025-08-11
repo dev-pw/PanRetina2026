@@ -20,7 +20,7 @@
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-8 uppercase"> <?= is_language_en('Venue', 'Local do Evento') ; ?> </h6>
+                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language_en('Venue', 'Local do Evento') ; ?> </h6>
 
                 <p class="text-white mt-7 max-w-75 font-bold mx-auto md:mx-0 text-sm"><?= get_option('options_info_2'); ?></p>
 
@@ -32,7 +32,7 @@
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-8 uppercase"> <?= is_language_en('Executive Secretariat', 'Secretaria Executiva') ; ?> </h6>
+                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language_en('Executive Secretariat', 'Secretaria Executiva') ; ?> </h6>
 
                 <?= wp_get_attachment_image(12, 'full', '', ['class' => 'h-12 object-contain max-md:mx-auto w-40']); ?>
 
@@ -44,17 +44,17 @@
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-8 uppercase"> <?= is_language_en('Official Agency', 'Agência Oficial'); ?></h6>
+                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language_en('Official Agency', 'Agência Oficial'); ?></h6>
 
                 <a href="https://singularis.tur.br/" target="_blank" rel="noopener noreferrer"><?= wp_get_attachment_image(12, 'full', '', ['class' => 'h-12 object-contain mx-auto sm:mx-0 w-40']); ?></a>
 
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-8 uppercase"> <?= is_language_en('Presented By', 'Realização'); ?> </h6>
+                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language_en('Presented By', 'Realização'); ?> </h6>
 
                 <div class="flex flex-row 2xl:flex-row gap-3">
-                    <?= wp_get_attachment_image(21, 'full', '', ['class' => 'mx-auto sm:mx-0 w-20 2xl:w-30 object-contain']); ?>
+                    <?= wp_get_attachment_image(21, 'full', '', ['class' => 'mx-auto sm:mx-0 w-20 2xl:w-25 object-contain']); ?>
                 </div>
 
             </div>
