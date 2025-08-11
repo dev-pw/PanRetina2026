@@ -25,8 +25,8 @@
                 <p class="text-white mt-7 max-w-75 font-bold mx-auto md:mx-0 text-sm"><?= get_option('options_info_2'); ?></p>
 
                 <div class="space-x-4 mt-7">
-                    <a href="<?= get_option('options_info_6'); ?>" class="btn-outline-white text-sm"> Waze </a>
-                    <a href="<?= get_option('options_info_5'); ?>" class="btn-outline-white text-sm"> Maps </a>
+                    <a href="<?= get_option('options_info_6'); ?>" class="btn-outline-white text-sm py-1 px-4"> Waze </a>
+                    <a href="<?= get_option('options_info_5'); ?>" class="btn-outline-white text-sm py-1 px-4"> Maps </a>
                 </div>
 
             </div>
