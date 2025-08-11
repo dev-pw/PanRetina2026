@@ -1,25 +1,27 @@
-<section class="l-mensagem">
-    <div class="max-xl:container 2xl:container mx-auto">
-        <div class="grid grid-cols-12 overflow-hidden max-xl:gap-y-6 2xl:gap-4">
-            <div class="col-span-12 xl:col-span-6 l-mensagem__card bg-primary">
-                <div class="l-mensagem__item">
-                    <img src="<?= wp_get_attachment_image_src(69, 'full')[0]; ?>" class="md:max-w-90 md:h-full order-2 md:order-1 object-cover object-bottom" alt="">
-                    <div class="p-8 text-white order-1">
-                        <h6 class="text-base mb-6 text-limit"> Lorem ipsum amet, consectetur adipiscing elit. Etiam accumsan </h6>
-                        <p class="font-bold text-sm">Osias Francisco de Souza </p> 
-                        <p class="text-sm">BRAVS President <br> Presidente da SBRV</p>
+<section class="pb-20">
+    <div class="2xl:container 2xl:mx-auto relative">
+
+        <div class="absolute -bottom-5 right-10 z-10">
+            <p class="text-xl md:text-5xl text-primary font-black"> <span class="text-[#E72C33]">SPRV</span> 2026 </p>
+        </div>
+
+        <div class="grid grid-cols-12 relative 2xl:rounded-xl overflow-hidden">
+
+            <div class="col-span-12 lg:col-span-4 bg-primary">
+                <div class="pb-0 p-8 2xl:ps-20 text-white order-1 h-full flex max-sm:flex-col lg:flex-col max-xl:items-center justify-center">
+                    <div>
+                        <p class="text-sm"> Prof. Dr. </p>
+                        <h4 class="h1"> Mauricio <br> Maia </h4>
                     </div>
+                    <img src="<?= wp_get_attachment_image_src(43, 'full')[0]; ?>" class="object-cover object-top h-85 w-100 2xl:h-90 2xl:w-110 xl:absolute bottom-0 lg:left-[10%] z-10" alt="">
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6 l-mensagem__card bg-[#005EB5]">
-                <div class="l-mensagem__item">
-                    <img src="<?= wp_get_attachment_image_src(70, 'full')[0]; ?>" class="md:max-w-90 md:h-full order-2 md:order-1 object-cover object-bottom" alt="">
-                    <div class="p-8 text-white order-1">
-                        <h6 class="text-base mb-6 text-limit"> <?= get_the_excerpt(is_language_en(82, 84) ); ?> </h6>
-                        <p class="font-bold text-sm"> Leandro Cabral Zacharias | Octaviano Magalhães Junior </p>
-                        <p class="text-sm">50th BRAVS MEETING 2026 Presidents <br> Presidentes do 50th BRAVS Meeting 2026 </p>
-                    </div>
+            <div class="col-span-12 lg:col-span-8 bg-gray-50 py-20 relative">
+                <div class="px-10 lg:ps-30 2xl:ps-25 text-white order-1">
+                    <h2 class="text-primary mb-6 font-black"> Mensagem do Presidente </h2>
+                    <p class="text-dark"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
+                
             </div>
         </div>
     </div>

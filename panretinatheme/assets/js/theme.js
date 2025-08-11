@@ -9,11 +9,13 @@ jQuery(document).ready(function ($) {
       if ($(window).scrollTop() > 150) {
          $('#js-header-site').addClass('fixed animation-translate shadow-md py-1 bg-white');
          $('#js-header-site').removeClass('py-3');
+         $('#js-header-site #toggle').removeClass('md:bg-white');
          $('#js-header-brand img').addClass('!w-[200px]');
       }
       else {
          $('#js-header-site').removeClass('fixed animation-translate shadow-md py-1 bg-white');
          $('#js-header-site').addClass('py-3');
+         $('#js-header-site #toggle').addClass('md:bg-white');
          $('#js-header-brand img').removeClass('!w-[200px]');
       }
    });
