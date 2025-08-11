@@ -13,7 +13,7 @@
                 <?php for ($i = 0; $i < 6; $i ++) : ?>
                 <div class="swiper-slide">
 
-                    <div class="relative group/card transition-all duration-200 overflow-hidden rounded-full bg-secondary hover:bg-primary size-65 2xl:size-75">
+                    <div class="relative group/card transition-all duration-200 overflow-hidden rounded-full bg-secondary hover:bg-primary mx-auto size-80 lg:size-65 2xl:size-75">
 
                         <a href="<?= the_permalink(); ?>" title="<?= get_the_title(); ?>" class="relative">
                             <img src="<?= wp_get_attachment_image_src( 47, 'full')[0]; ?>" class="mx-auto" alt="<?= get_post(47)->post_title; ?>">
@@ -74,7 +74,7 @@
                 0: {
                     slidesPerView: 1,
                 },
-                640: {
+                768: {
                     slidesPerView: 2,
                 },
                 992: {
