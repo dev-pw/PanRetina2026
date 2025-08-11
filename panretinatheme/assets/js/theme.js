@@ -93,15 +93,15 @@ jQuery(document).ready(function ($) {
       $('.target a').attr('target', '_blank');
 
       if($('.lang-item-pt a').attr('lang')) {
-         $('.lang-item-pt a img').attr('src', url + '/panrertina2026/wp-content/uploads/brasil.png');
+         $('.lang-item-pt a img').attr('src', url + '/panretina2026/wp-content/uploads/brasil.png');
       }
 
       if($('.lang-item-en a').attr('lang')) {
-         $('.lang-item-en a img').attr('src', url + '/panrertina2026/wp-content/uploads/estados-unidos.png');
+         $('.lang-item-en a img').attr('src', url + '/panretina2026/wp-content/uploads/estados-unidos.png');
       }
 
       if($('.lang-item-es a').attr('lang')) {
-         $('.lang-item-es a img').attr('src', url + '/panrertina2026/wp-content/uploads/espanha.png');
+         $('.lang-item-es a img').attr('src', url + '/panretina2026/wp-content/uploads/espanha.png');
       }
 
       if($('.lang-item')){
