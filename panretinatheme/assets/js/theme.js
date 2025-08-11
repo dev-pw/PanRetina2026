@@ -10,11 +10,15 @@ jQuery(document).ready(function ($) {
          $('#js-header-site').addClass('fixed animation-translate shadow-md py-1 bg-white');
          $('#js-header-site').removeClass('py-3');
          $('#js-header-site #toggle').removeClass('md:bg-white');
+         $('#js-header-site #rs').removeClass('btn-rs');
+         $('#js-header-site #rs').addClass('btn-rs-dark');
          $('#js-header-brand img').addClass('!w-[200px]');
       }
       else {
          $('#js-header-site').removeClass('fixed animation-translate shadow-md py-1 bg-white');
          $('#js-header-site').addClass('py-3');
+         $('#js-header-site #rs').addClass('btn-rs');
+         $('#js-header-site #rs').removeClass('btn-rs-dark');
          $('#js-header-site #toggle').addClass('md:bg-white');
          $('#js-header-brand img').removeClass('!w-[200px]');
       }
@@ -89,15 +93,15 @@ jQuery(document).ready(function ($) {
       $('.target a').attr('target', '_blank');
 
       if($('.lang-item-pt a').attr('lang')) {
-         $('.lang-item-pt a img').attr('src', url + '/site/wp-content/uploads/brasil.png');
+         $('.lang-item-pt a img').attr('src', url + '/panrertina2026/wp-content/uploads/brasil.png');
       }
 
       if($('.lang-item-en a').attr('lang')) {
-         $('.lang-item-en a img').attr('src', url + '/site/wp-content/uploads/estados-unidos.png');
+         $('.lang-item-en a img').attr('src', url + '/panrertina2026/wp-content/uploads/estados-unidos.png');
       }
 
       if($('.lang-item-es a').attr('lang')) {
-         $('.lang-item-es a img').attr('src', url + '/site/wp-content/uploads/espanha.png');
+         $('.lang-item-es a img').attr('src', url + '/panrertina2026/wp-content/uploads/espanha.png');
       }
 
       if($('.lang-item')){

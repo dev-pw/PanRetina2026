@@ -44,7 +44,7 @@ endif;?>
 
                <div class="inline-flex gap-3 items-center">
                   
-                  <div class="flex items-center gap-2 btn-rs max-md:hidden">
+                  <div id="rs" class="flex items-center gap-2 btn-rs max-md:hidden">
                      <?= get_template_part('template-parts/c-redes-sociais'); ?>
                   </div>
 
@@ -52,7 +52,7 @@ endif;?>
                      <?= get_template_part('template-parts/c-language'); ?>
                   </div>
 
-                  <button type="button" class="size-12 flex gap-[6px] flex-col justify-center items-end bg-gray-100 md:bg-white hover:bg-secondary rounded-lg p-2 outline-hidden transition-all duration-300 group/toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="drawer-navigation" data-hs-overlay="#drawer-navigation">
+                  <button type="button" id="toggle" class="size-12 flex gap-[6px] flex-col justify-center items-end bg-gray-100 md:bg-white hover:bg-secondary rounded-lg p-2 outline-hidden transition-all duration-300 group/toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="drawer-navigation" data-hs-overlay="#drawer-navigation">
                      <span class="w-[50%] h-[3px] bg-primary transition-all duration-300 group-hover/toggle:bg-white group-hover/toggle:w-full"></span>
                      <span class="w-[70%] h-[3px] bg-primary transition-all duration-300 group-hover/toggle:bg-white group-hover/toggle:w-full"></span>
                      <span class="w-[50%] h-[3px] bg-primary me-auto transition-all duration-300 group-hover/toggle:bg-white group-hover/toggle:w-full"></span>
