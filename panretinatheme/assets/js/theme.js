@@ -106,26 +106,70 @@ jQuery(document).ready(function ($) {
       $('.lang-item a img').attr('height', '230');
       $('.lang-item a img').css('height', '');
       $('.lang-item a img').css('width', '');
-
+      
       $('.image-pt img').attr('src', url + '/wp-content/uploads/brazil.png');
       $('.image-en img').attr('src', url + '/wp-content/uploads/usa.png');
       $('.image-es img').attr('src', url + '/wp-content/uploads/spain.png');
-
+      
       if($('.lang-image')){
          $('.lang-image img').attr('width', '33');
          $('.lang-image img').css('height', '');
          $('.lang-image img').css('width', '');
       }
-
+      
    })
+   
+   /*=================================================
+   OVERLAY AO MUDAR IDIOMA
+   =================================================*/
+   $('.lang-item-pt a').attr('data-lang', 'pt');
+   $('.lang-item-en a').attr('data-lang', 'en');
+   $('.lang-item-es a').attr('data-lang', 'es');
 
+   var KEY = 'langChosen';
+   var $overlay = $('#js-changeLang');
+   var $toggle  = $('#js-toggleLang');
 
-   $('#js-toggleLang').on('click', () => {
-      $('#js-changeLang').removeClass('invisible');
-      setTimeout( () => {
-         $('#js-changeLang').addClass('!opacity-100');
-      }, 500);
-   })
+   function openOverlay() {
+      $overlay.removeClass('invisible opacity-0').addClass('!opacity-100');
+      $('html').addClass('overflow-hidden');
+   }
+
+   function closeOverlay() {
+      $overlay.removeClass('!opacity-100').addClass('opacity-0');
+      setTimeout(function() {
+         $overlay.addClass('invisible');
+      }, 200);
+      $('html').removeClass('overflow-hidden');
+   }
+
+    // Detecta idioma e se é home
+    var currentLang = window.__CURRENT_LANG__ || '';
+    var isFront = window.__IS_FRONT__ || false;
+    var chosen = localStorage.getItem(KEY);
+
+    // Primeira visita: abre overlay (opcionalmente só na home)
+    if (!chosen) {
+        if (currentLang) {
+            localStorage.setItem(KEY, currentLang);
+        } else {
+            if (isFront) {
+                openOverlay();
+            }
+        }
+    }
+
+    // Clique no botão do topo
+    $toggle.on('click', function(e) {
+        e.preventDefault();
+        openOverlay();
+    });
+
+    // Clique nas opções de idioma
+    $('.lang-item a').on('click', function(e) {
+        var code = $(this).data('lang');
+        localStorage.setItem(KEY, code);
+    });
 
    /*================================================
     Contador do evento 
