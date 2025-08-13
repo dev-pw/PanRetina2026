@@ -78,7 +78,7 @@ function renderAttributes($attributes) {
                 <i class="<?= $btn['icon']; ?> h2"></i>
                 <p class="font-bold c-card-btn__title"> <?= $btn['nome']; ?> </p>
 
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p> <?= $btn['desc']; ?> </p>
 
                 <a <?= renderAttributes($linkAttributes); ?> >
                     <?= is_language('Load more', 'Más información', 'Saiba mais'); ?>
