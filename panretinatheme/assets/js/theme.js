@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
 
-   let url = window.origin;
+   let host = window.origin;
+   console.log(host);
+   
+   let path = '/panretina2026'; 
+   let url = (host == 'http://localhost') ? host : host+path;
 
    /*=================================================
    CONFIGURACAO HEADER STICKY
@@ -13,6 +17,8 @@ jQuery(document).ready(function ($) {
          $('#js-header-site #rs').removeClass('btn-rs');
          $('#js-header-site #rs').addClass('btn-rs-dark');
          $('#js-header-brand img').addClass('!w-[200px]');
+         $('.l-lang').addClass('!border-primary');
+         $('.l-lang p').addClass('!text-primary');
       }
       else {
          $('#js-header-site').removeClass('fixed animation-translate shadow-md py-1 bg-white');
@@ -21,6 +27,8 @@ jQuery(document).ready(function ($) {
          $('#js-header-site #rs').removeClass('btn-rs-dark');
          $('#js-header-site #toggle').addClass('md:bg-white');
          $('#js-header-brand img').removeClass('!w-[200px]');
+         $('.l-lang').removeClass('!border-primary');
+         $('.l-lang p').removeClass('!text-primary');
       }
    });
 
@@ -90,28 +98,34 @@ jQuery(document).ready(function ($) {
     =================================================*/
     $(document).ready( () => {
 
-      $('.target a').attr('target', '_blank');
+      $('.lang-item-pt a img').attr('src', url + '/wp-content/uploads/brazil.png');
+      $('.lang-item-en a img').attr('src', url + '/wp-content/uploads/usa.png');
+      $('.lang-item-es a img').attr('src', url + '/wp-content/uploads/spain.png');
+      $('.lang-item a img').addClass('rounded-xl');
+      $('.lang-item a img').attr('width', '230');
+      $('.lang-item a img').attr('height', '230');
+      $('.lang-item a img').css('height', '');
+      $('.lang-item a img').css('width', '');
 
-      if($('.lang-item-pt a').attr('lang')) {
-         $('.lang-item-pt a img').attr('src', url + '/panretina2026/wp-content/uploads/brasil.png');
+      $('.image-pt img').attr('src', url + '/wp-content/uploads/brazil.png');
+      $('.image-en img').attr('src', url + '/wp-content/uploads/usa.png');
+      $('.image-es img').attr('src', url + '/wp-content/uploads/spain.png');
+
+      if($('.lang-image')){
+         $('.lang-image img').attr('width', '33');
+         $('.lang-image img').css('height', '');
+         $('.lang-image img').css('width', '');
       }
 
-      if($('.lang-item-en a').attr('lang')) {
-         $('.lang-item-en a img').attr('src', url + '/panretina2026/wp-content/uploads/estados-unidos.png');
-      }
-
-      if($('.lang-item-es a').attr('lang')) {
-         $('.lang-item-es a img').attr('src', url + '/panretina2026/wp-content/uploads/espanha.png');
-      }
-
-      if($('.lang-item')){
-         $('.lang-item a img').attr('width', '40');
-         $('.lang-item a img').attr('height', '40');
-         $('.lang-item a img').css('height', '');
-         $('.lang-item a img').css('width', '');
-      }
    })
 
+
+   $('#js-toggleLang').on('click', () => {
+      $('#js-changeLang').removeClass('invisible');
+      setTimeout( () => {
+         $('#js-changeLang').addClass('!opacity-100');
+      }, 500);
+   })
 
    /*================================================
     Contador do evento 
