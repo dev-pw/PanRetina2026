@@ -17,8 +17,3 @@
         </div>
     </div>
 </div>
-
-<script>
-window.__CURRENT_LANG__ = ""; // útil no JS
-window.__IS_FRONT__ = <?= is_front_page() ? 'true' : 'false' ?>; // opcional
-</script>
