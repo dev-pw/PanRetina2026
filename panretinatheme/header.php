@@ -30,12 +30,10 @@ endif;?>
 <div class="wrapper-site">
 
    <!-- Preload -->
-   <div id="preload" class="bg-primary fixed z-70 w-full h-screen flex items-center justify-center">
+   <div id="preload" class="bg-primary fixed z-80 w-full h-screen flex items-center justify-center">
       <img src="<?php echo get_option( 'options_logo_preload' ); ?>" class="animate-bounce" width="200" alt="">
    </div>
    <!-- Preload -->
-    
-   <?= get_template_part('template-parts/c-view-lang'); ?>
 
    <header id="js-header-site" class="py-3 absolute w-full top-0 left-0 transition-all duration-300 z-60">
       <div class="container">
@@ -100,3 +98,5 @@ endif;?>
          
       </div>
    </div>
+
+   <?= get_template_part('template-parts/c-view-lang'); ?>
