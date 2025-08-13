@@ -49,7 +49,7 @@ endif;?>
 
                <div class="inline-flex gap-3 items-center">
                   
-                  <div id="rs" class="flex items-center gap-2 btn-rs max-md:hidden">
+                  <div id="rs" class="flex items-center gap-2 btn-rs max-lg:hidden">
                      <?= get_template_part('template-parts/c-redes-sociais'); ?>
                   </div>
 
@@ -95,7 +95,7 @@ endif;?>
                <?= get_template_part('template-parts/c-language'); ?>
             </div>
                
-            <div class="flex items-center gap-2 btn-rs-dark md:hidden">
+            <div class="flex items-center gap-2 btn-rs-dark lg:hidden">
                <?= get_template_part('template-parts/c-redes-sociais'); ?>
             </div>
                
@@ -104,7 +104,7 @@ endif;?>
       </div>
    </div>
 
-   <div id="js-changeLang" class="fixed size-full inset-0 bg-[url(../../../../uploads/banner-home.png)] bg-cover max-lg:bg-left xl:bg-center z-80 transition opacity-0 invisible">
+   <div id="js-changeLang" class="fixed size-full inset-0 bg-[url(../../../../uploads/banner-home.png)] bg-cover max-lg:bg-left xl:bg-center z-60 transition opacity-0 invisible">
       <div class="container h-full">
          <div class="flex max-md:flex-col max-xl:justify-center gap-y-10 md:gap-50 h-full items-center">
 
