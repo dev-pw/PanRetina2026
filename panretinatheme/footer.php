@@ -77,7 +77,7 @@
                 <?= get_template_part('template-parts/c-redes-sociais'); ?>
             </div>
 
-            <p class="text-white font-bold text-sm text-center lg:absolute inset-auto -z-1 lg:w-full"> © Copyright <?= bloginfo('name'); ?> - <?= is_language('All rights reserved', 'Todos os direitos reservados') ; ?> </p>
+            <p class="text-white font-bold text-sm text-center lg:absolute inset-auto -z-1 lg:w-full"> © Copyright <?= bloginfo('name'); ?> - <?= is_language('All rights reserved', 'Reservados todos los derechos', 'Todos os direitos reservados') ; ?> </p>
 
             <div class="auto-cols-auto">
                 <a href="https://planetaw.ag/" title="Planeta W - Design + Web" target="_blank" class="text-sm" id="logo-pw">

@@ -18,11 +18,6 @@
    <meta id='getUrl' data-url="<?= bloginfo('url'); ?>">
    <?php wp_head(); ?>
 
-   <script>
-   window.__CURRENT_LANG__ = "<?= esc_js($current_lang); ?>"; // útil no JS
-   window.__IS_FRONT__ = <?= is_front_page() ? 'true' : 'false' ?>; // opcional
-   </script>
-
 </head>
 
 <body <?php body_class('overflow-y-hidden'); ?>>
@@ -39,7 +34,7 @@ endif;?>
       <img src="<?php echo get_option( 'options_logo_preload' ); ?>" class="animate-bounce" width="200" alt="">
    </div>
    <!-- Preload -->
-   
+    
    <?= get_template_part('template-parts/c-view-lang'); ?>
 
    <header id="js-header-site" class="py-3 absolute w-full top-0 left-0 transition-all duration-300 z-60">

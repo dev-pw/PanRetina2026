@@ -74,7 +74,7 @@
 <table class="c-responsive-table text-white w-full">
     <thead>
         <tr>
-            <th class="w-[16.6px] bg-[#E9E9E9] text-primary uppercase font-bold text-lg rounded-t-lg"> <?= is_language('Category', 'Categoria'); ?> </th>
+            <th class="w-[16.6px] bg-[#E9E9E9] text-primary uppercase font-bold text-lg rounded-t-lg"> <?= is_language('Category', 'Categoría', 'Categoria'); ?> </th>
             <?php foreach ($cols as $key => $col) : ?>
             <th class="w-[16.6px] align-bottom p-0 text-center cat<?= $key+1 ?> small cursor-pointer relative h-1 text-white" data-label-hover="Register now">
                 <div class="bg-primary ms-auto py-3 rounded-t-lg flex items-center justify-center h-full w-[85%] px-5 <?= ($key == 1)? 'font-bold' : '';?>" data-label-hover="Register now"> 
