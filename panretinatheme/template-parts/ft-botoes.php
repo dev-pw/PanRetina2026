@@ -1,10 +1,38 @@
 <?php
 
 $buttons = array(
-    ['nome' => is_language_en('Registration', 'Inscreva-se'), 'icon' => 'icon-exam', 'modal' => false, 'idModal' => '', 'link' => is_link_en(60, 58), 'link_externo' => false],
-    ['nome' => is_language_en('Speakers', 'Palestrantes'), 'icon' => 'icon-graduate-hat', 'modal' => false, 'idModal' => '', 'link' => is_link_en(147, 149), 'link_externo' => false],
-    ['nome' => is_language_en('Programming', 'Programação'), 'icon' => 'icon-hotel', 'modal' => false, 'idModal' => '', 'link' => is_link_en(52, 50), 'link_externo' => false],
-    ['nome' => is_language_en('Venue', 'Local do Evento'), 'icon' => 'icon-location', 'modal' => false, 'idModal' => '', 'link' => is_link_en(56, 54), 'link_externo' => false],
+    [
+        'nome' => is_language('Registration', 'Suscribir', 'Inscreva-se'), 
+        'desc' => is_language("Don't miss out! Sign up now!", '¡No te lo pierdas! ¡Regístrate ya!', 'Não perca! Inscreva-se agora mesmo'), 
+        'icon' => 'icon-exam', 
+        'modal' => false, 'idModal' => '', 
+        'link' => is_link_lang(60, 0, 58), 
+        'link_externo' => false
+    ],
+    [
+        'nome' => is_language('Speakers', 'Oradores', 'Palestrantes'), 
+        'desc' => is_language('Check out the national and international speakers', 'Conozca a los ponentes nacionales e internacionales', 'Confira os palestrantes nacionais e internacionais'), 
+        'icon' => 'icon-graduate-hat', 
+        'modal' => false, 'idModal' => '', 
+        'link' => is_link_lang(147, 0, 149), 
+        'link_externo' => false
+    ],
+    [
+        'nome' => is_language('Programming', 'Cronograma', 'Programação'), 
+        'desc' => is_language('Check out the full schedule', 'Consulta la programación completa', 'Confira a programação completa'), 
+        'icon' => 'icon-hotel', 
+        'modal' => false, 'idModal' => '', 
+        'link' => is_link_lang(52, 0, 50), 
+        'link_externo' => false
+    ],
+    [
+        'nome' => is_language('Venue', 'Local', 'Local do Evento'), 
+        'desc' => is_language('Check out the event location and plan ahead', 'Consulte la ubicación del evento y planifique con anticipación', 'Confira o local do evento e se programe'), 
+        'icon' => 'icon-location', 
+        'modal' => false, 'idModal' => '', 
+        'link' => is_link_lang(56, 0, 54), 
+        'link_externo' => false
+    ],
 );
 
 // Função helper para gerar atributos do link
@@ -53,7 +81,7 @@ function renderAttributes($attributes) {
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                 <a <?= renderAttributes($linkAttributes); ?> >
-                    <?= is_language_en('Load more', 'Saiba mais'); ?>
+                    <?= is_language('Load more', 'Más información', 'Saiba mais'); ?>
                 </a>
             
             </div>

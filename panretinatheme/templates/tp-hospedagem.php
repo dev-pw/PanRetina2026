@@ -42,7 +42,7 @@ get_header();
                             </p>
                         </div>
 
-                        <a class="btn-primary mt-4" href="https://retina2025.bukly.com/" target="_blank"> <?= is_language_en('BOOK NOW', 'RESERVAR'); ?> </a>
+                        <a class="btn-primary mt-4" href="https://retina2025.bukly.com/" target="_blank"> <?= is_language('BOOK NOW', 'LIBRO', 'RESERVAR'); ?> </a>
 
 					</div>
 				</div>

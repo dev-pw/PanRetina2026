@@ -45,7 +45,7 @@ $palestrantes = new WP_Query($args);
                             <h2 class="h5 text-primary mb-4"> <?= the_title(); ?> </h2>
                             <div class="text-sm/6 u-list-style text-limit"> <?= the_content(); ?> </div>
                             <button type="button" class="btn-outline-primary mt-3 cursor-pointer" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-palestrante-<?= the_id(); ?>" data-hs-overlay="#modal-palestrante-<?= the_id(); ?>"> 
-                                <?= is_language_en('Read more', 'Leia mais'); ?> 
+                                <?= is_language('Read more', 'leer más', 'Leia mais'); ?> 
                             </button>
                         </div>
                     </div>

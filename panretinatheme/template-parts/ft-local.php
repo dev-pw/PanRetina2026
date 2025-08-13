@@ -12,7 +12,7 @@
                     <img src="<?= wp_get_attachment_image_src(41, 'full')[0]; ?>" class="max-lg:hidden w-60 -ms-32" alt="">
                     
                     <div class="lg:-ms-10">
-                        <h2 class="text-white h3"> <?= is_language_en('Location', 'Localização'); ?> </h2>
+                        <h2 class="text-white h3"> <?= is_language('Location', 'Ubicación', 'Localização'); ?> </h2>
                         
                         <p class="mt-5 mb-6 text-white"> <?= get_option('options_info_2'); ?> </p>
                         <div class="space-x-4 mt-7">

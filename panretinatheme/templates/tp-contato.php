@@ -23,7 +23,7 @@ get_header();
                 <div class="col-span-2 md:col-span-1">
                     <div class="shadow-lg rounded-2xl py-12 text-center h-full">
 
-                        <h4 class="text-primary h5"> <?= is_language_en('Executive Secretariat', 'Secretaria Executiva'); ?>: </h4>
+                        <h4 class="text-primary h5"> <?= is_language('Executive Secretariat', 'Secretaría Ejecutiva', 'Secretaria Executiva'); ?>: </h4>
 
                         <div class="my-4 bg-gray-100 p-4">
                             <img src="<?= wp_get_attachment_image_src(63, 'full')[0]; ?>" alt="" class="mx-auto max-w-66">
@@ -50,7 +50,7 @@ get_header();
                 <div class="col-span-2 md:col-span-1">
                     <div class="shadow-lg rounded-2xl py-12 text-center h-full">
 
-                        <h4 class="text-primary h5"><?= is_language_en('Presented by', 'Realização'); ?>:</h4>
+                        <h4 class="text-primary h5"><?= is_language('Presented by', 'Realización', 'Realização'); ?>:</h4>
 
                         <div class="flex flex-col flex-wrap justify-center gap-5 sm:flex-row my-4 gap-4 bg-gray-100 p-4">
                             <img src="<?= wp_get_attachment_image_src(65, 'full')[0]; ?>" alt="" class="max-w-66">

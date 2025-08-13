@@ -94,10 +94,22 @@ Pre get posts
 --------------------------------------------------------------*/
 //include('inc/pre_get_posts.php');
 
-function is_language_en($en, $pt) {
-    return (pll_current_language() == 'en') ? $en : $pt;
+function is_language($en, $es, $pt) {
+	if (pll_current_language() == 'en') :
+		return $en;
+	elseif (pll_current_language() == 'es') :
+		return $es;
+	else: 
+		return $pt;
+	endif;
 }
 
-function is_link_en($en, $pt) {
-    return get_the_permalink( (pll_current_language() == 'en') ? $en : $pt );
+function is_link_lang($en, $es, $pt) {
+	if (pll_current_language() == 'en') :
+		return get_the_permalink($en);
+	elseif (pll_current_language() == 'es') :
+		return get_the_permalink($es);
+	else: 
+		return get_the_permalink($pt);
+	endif;
 }
