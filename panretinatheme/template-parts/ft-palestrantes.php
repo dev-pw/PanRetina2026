@@ -2,8 +2,8 @@
     <div class="container relative">
 
         <div class="text-primary mb-10">
-            <p class="h3 !font-normal"> Conheça os </p>
-            <h2 class="h1 font-black"> palestrantes confirmados </h2>
+            <p class="h3 !font-normal"> <?= is_language('Meet the', 'Conoce a los', 'Conheça os'); ?>  </p>
+            <h2 class="h1 font-black"> <?= is_language('confirmed speakers', 'ponentes confirmados', 'palestrantes confirmados'); ?>  </h2>
         </div>
 
         <div class="swiper !static">
@@ -22,8 +22,8 @@
                         <div class="flex items-center gap-2 absolute z-10 w-[70%] left-[14%] bottom-12 bg-white p-4 transition-all duration-200 rounded-2xl group-hover/card:-translate-y-5">
                             <img src="<?= wp_get_attachment_image_src( 10, 'full')[0]; ?>" class="border border-2 border-white rounded-full size-11" alt="">
                             <div>
-                                <h4 class="text-base text-secondary font-black"> Nome do Palestrante </h4>
-                                <p class="text-sm"> Oftalmmologista </p>
+                                <h4 class="text-base text-secondary font-black"> <?= is_language('Speaker Name', 'Nombre del orador', 'Nome do Palestrante'); ?> </h4>
+                                <p class="text-sm"> <?= is_language('Ophthalmologist', 'Oftalmólogo', 'Oftalmmologista'); ?> </p>
                             </div>
                         </div>
 
