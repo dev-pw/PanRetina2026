@@ -19,8 +19,8 @@
                             <img src="<?= wp_get_attachment_image_src( 47, 'full')[0]; ?>" class="mx-auto" alt="<?= get_post(47)->post_title; ?>">
                         </a>
                         
-                        <div class="flex items-center gap-2 absolute z-10 w-[70%] left-[14%] bottom-12 bg-white p-4 transition-all duration-200 rounded-2xl group-hover/card:-translate-y-5">
-                            <img src="<?= wp_get_attachment_image_src( 10, 'full')[0]; ?>" class="border border-2 border-white rounded-full size-11" alt="">
+                        <div class="flex items-center gap-2 absolute z-10 w-[70%] left-[14%] bottom-12 bg-white p-2 transition-all duration-200 rounded-2xl group-hover/card:-translate-y-5">
+                            <img src="<?= wp_get_attachment_image_src( 10, 'full')[0]; ?>" class="border border-2 border-white rounded-full size-9" alt="">
                             <div>
                                 <h4 class="text-base text-secondary font-black"> <?= is_language('Speaker Name', 'Nombre del orador', 'Nome do Palestrante'); ?> </h4>
                                 <p class="text-sm"> <?= is_language('Ophthalmologist', 'Oftalmólogo', 'Oftalmmologista'); ?> </p>
