@@ -4,7 +4,9 @@
 
         <?= get_template_part('template-parts/c-table'); ?>
 
-        <a href="<?= the_permalink(); ?>" class="btn-secondary mt-6"> <?= is_language('Click here and sign up', 'Haga clic aquí y regístrese', 'Clique aqui e inscreva-se'); ?></a>
+        <a href="<?= the_permalink(); ?>" class="btn-secondary mt-6" title="<?= is_language('Click here and sign up', 'Haga clic aquí y regístrese', 'Clique aqui e inscreva-se'); ?>"> 
+            <?= is_language('Click here and sign up', 'Haga clic aquí y regístrese', 'Clique aqui e inscreva-se'); ?>
+        </a>
 
     </div>
 </section>

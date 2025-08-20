@@ -9,7 +9,7 @@
 
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="<?= language_attributes(); ?>">
+<html class="no-js" <?= language_attributes(); ?>>
 
 <head>
    <meta charset="UTF-8">

@@ -2,18 +2,19 @@
     <div class="container h-full">
         <div class="flex max-md:flex-col max-xl:justify-center gap-y-10 md:gap-50 h-full items-center">
 
-        <img src="<?= get_option('options_logo_header'); ?>" class="w-40 md:w-76 object-contain max-md:mx-auto">
+            <img src="<?= get_option('options_logo_header'); ?>" class="w-40 md:w-76 object-contain max-md:mx-auto" alt="Logo <?= bloginfo('name'); ?>">
 
-        <ul class="l-polylang flex md:flex-col gap-3">
-            <?php // language polylang
-            pll_the_languages( array(
-                'show_flags'   => 1,
-                'show_names'   => 0,
-                'hide_current' => 0,
-                'display_names_as' => 'slug'
-                ) ); 
-            ?>
-        </ul>
+            <ul class="l-polylang flex md:flex-col gap-3">
+                <?php // language polylang
+                pll_the_languages( array(
+                    'show_flags'   => 1,
+                    'show_names'   => 0,
+                    'hide_current' => 0,
+                    'display_names_as' => 'slug'
+                    ) ); 
+                ?>
+            </ul>
+
         </div>
     </div>
 </div>

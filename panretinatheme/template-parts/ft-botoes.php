@@ -80,7 +80,7 @@ function renderAttributes($attributes) {
 
                 <p> <?= $btn['desc']; ?> </p>
 
-                <a <?= renderAttributes($linkAttributes); ?> >
+                <a <?= renderAttributes($linkAttributes); ?> title="<?= is_language('Load more', 'Más información', 'Saiba mais'); ?>">
                     <?= is_language('Load more', 'Más información', 'Saiba mais'); ?>
                 </a>
             

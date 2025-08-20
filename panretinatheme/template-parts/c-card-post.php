@@ -29,7 +29,7 @@ $catId = get_the_category()[0]->term_id;
             <?php if (has_category()): ?>
             <div class="col-auto text-xs text-white">
                 <span class="icon-tag2 me-1 text-secondary"></span>
-                <a href="<?= get_category_link($catId); ?>" class="hover:text-gray-400 transition-all"> <?= $catName; ?> </a>
+                <a href="<?= get_category_link($catId); ?>" class="hover:text-gray-400 transition-all" title="<?= $catName;?>"> <?= $catName; ?> </a>
             </div>
             <?php endif; ?>
 

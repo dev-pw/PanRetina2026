@@ -19,7 +19,7 @@ $slug = $current_language['slug'];
 
 ?>
 
-<div id="js-toggleLang" class="l-lang cursor-pointer rounded-xl border-1 border-primary md:border-white py-3 px-4 flex gap-3 items-center">
+<div class="js-toggleLang l-lang cursor-pointer rounded-xl border-1 border-primary md:border-white py-3 px-4 flex gap-3 items-center">
     <div class="lang-image image-<?= $slug; ?>">
         <?= $flag; ?>
     </div>

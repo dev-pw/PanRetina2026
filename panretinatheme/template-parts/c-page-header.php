@@ -38,7 +38,7 @@ else {
 <header class="pt-10 pb-8 bg-linear-to-l from-[#CF9841] to-[#DEB148] text-white">
     <div class="container">
         <div class="text-center">
-            <h2 class="text-white"> <?= $title; ?> </h2>
+            <h1 class="text-white h2"> <?= $title; ?> </h1>
             <?php if(!is_single() || get_post_type() !== 'post' ) :
             get_template_part('template-parts/c-breadcrumbs');
             endif; ?>

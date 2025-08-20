@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
 
    var KEY = 'langChosen';
    var $overlay = $('#js-changeLang');
-   var $toggle  = $('#js-toggleLang');
+   var $toggle  = $('.js-toggleLang');
 
    function openOverlay() {
       $overlay.removeClass('invisible opacity-0').addClass('!opacity-100');
@@ -160,9 +160,11 @@ jQuery(document).ready(function ($) {
     }
 
     // Clique no botão do topo
-    $toggle.on('click', function(e) {
+    $toggle.each( function() {
+      this.on('click', function(e) {
         e.preventDefault();
         openOverlay();
+      })
     });
 
     // Clique nas opções de idioma
