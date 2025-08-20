@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
 
     // Clique no botão do topo
     $toggle.each( function() {
-      this.on('click', function(e) {
+      $(this).on('click', function(e) {
         e.preventDefault();
         openOverlay();
       })
