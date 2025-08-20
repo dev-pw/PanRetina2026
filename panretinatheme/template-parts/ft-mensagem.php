@@ -11,7 +11,7 @@
                 <div class="pb-0 p-8 2xl:ps-20 text-white order-1 h-full flex max-sm:flex-col lg:flex-col max-xl:items-center justify-center">
                     <div>
                         <p class="text-sm"> Prof. Dr. </p>
-                        <h4 class="h1"> Mauricio <br> Maia </h4>
+                        <p class="h1"> Mauricio <br> Maia </p>
                     </div>
                     <img src="<?= wp_get_attachment_image_src(43, 'full')[0]; ?>" class="object-cover object-top h-85 w-100 2xl:h-90 2xl:w-110 xl:absolute bottom-0 lg:left-[10%] z-10" alt="">
                 </div>

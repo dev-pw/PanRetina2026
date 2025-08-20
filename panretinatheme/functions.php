@@ -16,22 +16,15 @@ function enqueue_scripts() {
 	
 	// PRELINE
 	wp_enqueue_script( 'preline', 'https://cdn.jsdelivr.net/npm/preline@3.2.3/dist/preline.min.js', array('jquery'), $tema_version, true );
-	
-	// FLOWBITE
-	// wp_enqueue_script( 'flowbite', 'https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js', array('jquery'), $tema_version, true );
-	// wp_enqueue_style('flowbite', 'https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css', array(), $tema_version, 'all');
 
 	//SWIPER
 	if(is_front_page() || is_archive()) :
 	wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), $tema_version, 'all');
 	wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), $tema_version, true);
 	endif;
-
-	//JQUERY MASK
-	wp_enqueue_script('jqueryMask-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js', array('jquery'), $tema_version, true );
 	
 	//ANIMATE CSS
-	wp_enqueue_script('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array('jquery'), $tema_version, true );
+	// wp_enqueue_script('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array('jquery'), $tema_version, true );
 	
 	//STYLE THEME
 	wp_enqueue_style('icon', get_template_directory_uri().'/assets/icon/style.css', array(), $tema_version, 'all');
@@ -46,9 +39,12 @@ function enqueue_scripts() {
 	//SCRIPT FORMS JS
 	wp_enqueue_script( 'forms-js', get_template_directory_uri().'/assets/js/forms.js', array('jquery'), $tema_version, true );
 
+	//JQUERY MASK
+	wp_enqueue_script('jqueryMask-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js', array('jquery'), $tema_version, true );
+
 	// FANCYBOX
-	wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array('jquery'), $tema_version, true );
-	wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', array(), $tema_version, 'all');
+	// wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array('jquery'), $tema_version, true );
+	// wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', array(), $tema_version, 'all');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');

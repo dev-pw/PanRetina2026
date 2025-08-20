@@ -15,12 +15,12 @@
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
 
-                <img src="<?= get_option('options_logo_footer'); ?>" class="object-contain max-md:mx-auto w-76" >
+                <img src="<?= get_option('options_logo_footer'); ?>" class="object-contain max-md:mx-auto w-76" alt="Logo <?= bloginfo('name'); ?>">
 
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language('Venue', 'Local', 'Local do Evento') ; ?> </h6>
+                <p class="h6 text-sm text-secondary mb-6 uppercase"> <?= is_language('Venue', 'Local', 'Local do Evento') ; ?> </p>
 
                 <p class="text-white mt-7 max-w-75 font-bold mx-auto md:mx-0 text-sm"><?= get_option('options_info_2'); ?></p>
 
@@ -32,7 +32,7 @@
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language('Executive Secretariat', 'Secretaría Ejecutiva', 'Secretaria Executiva') ; ?> </h6>
+                <p class="h6 text-sm text-secondary mb-6 uppercase"> <?= is_language('Executive Secretariat', 'Secretaría Ejecutiva', 'Secretaria Executiva') ; ?> </p>
 
                 <?= wp_get_attachment_image(12, 'full', '', ['class' => 'h-12 object-contain max-md:mx-auto w-40']); ?>
 
@@ -44,14 +44,14 @@
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language('Official Agency', 'Agencia Oficial', 'Agência Oficial'); ?></h6>
+                <p class="h6 text-sm text-secondary mb-6 uppercase"> <?= is_language('Official Agency', 'Agencia Oficial', 'Agência Oficial'); ?></p>
 
-                <a href="https://singularis.tur.br/" target="_blank" rel="noopener noreferrer"><?= wp_get_attachment_image(12, 'full', '', ['class' => 'h-12 object-contain mx-auto sm:mx-0 w-40']); ?></a>
+                <?= wp_get_attachment_image(12, 'full', '', ['class' => 'h-12 object-contain mx-auto sm:mx-0 w-40']); ?>
 
             </div>
 
             <div class="w-full sm:w-[48%] xl:w-auto text-center sm:text-start">
-                <h6 class="text-sm text-secondary mb-6 uppercase"> <?= is_language('Presented By', 'Realización', 'Realização'); ?> </h6>
+                <p class="h6 text-sm text-secondary mb-6 uppercase"> <?= is_language('Presented By', 'Realización', 'Realização'); ?> </p>
 
                 <div class="flex flex-row 2xl:flex-row gap-3">
                     <?= wp_get_attachment_image(21, 'full', '', ['class' => 'mx-auto sm:mx-0 w-20 2xl:w-25 object-contain']); ?>
