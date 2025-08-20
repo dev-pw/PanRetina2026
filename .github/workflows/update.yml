@@ -18,5 +18,5 @@ jobs:
         server: ${{ secrets.host }}
         username: ${{ secrets.user }}
         password: ${{ secrets.pass }}
-        server-dir: public_html/panretina2026/wp-content/themes/panretinatheme/
+        server-dir: public_html/site/wp-content/themes/panretinatheme/
         local-dir: ./panretinatheme/

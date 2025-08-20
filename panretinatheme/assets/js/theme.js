@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
    let host = window.origin;
    console.log(host);
    
-   let path = '/panretina2026'; 
+   let path = '/site'; 
    let url = (host == 'http://localhost') ? host : host+path;
 
    /*=================================================
